@@ -5,7 +5,7 @@ Written in 2006 or 2007 before the Global Financial Crisis to send emails to a v
 
 What's unusual about it are several things:
 
-1. It uses the Linux kernel `epoll` mechanism to handle events instead of the more common `select` (which Perl supports directly), by invoking the kernel `epoll` APIs directly vis syscalls.
+1. It uses the Linux kernel `epoll` mechanism to handle events instead of the more common `select` (which Perl supports natively), by invoking the kernel `epoll` APIs directly vis syscalls.
 `Epoll` was new at the time, and state of the art, but also more complicated to set up and use.
 2. The company had six Class C (ie `/24`) blocks of IP addresses (roughly 1500, worth a small fortune today), and the code cycles through the addresses used to open the connection to the SMTP server while running. It's a good demonstration of dynamic adjustment of network settings.
 3. It is 100% Perl with few dependencies.
