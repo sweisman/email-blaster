@@ -18,3 +18,5 @@ The parent process calculates the emails to send, collates them by recipient dom
 The child receives the instructions, opens an SMTP connection to the recipient domain, and sends the email. It then sends a response back to the parent, which logs the exchange.
 
 There were plans to convert the hard-coded version you see into a general solution with a web-based front end.
+
+There is also an SMTP server script to process replies.
